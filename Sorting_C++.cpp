@@ -27,22 +27,22 @@ int main() {
     std::cin>>s;
     int count = 0;
     for(int i = 0; i<s.size();i++){
-        if(s[i] == '+'){
+        if(s[i] == '+'){ //nos saltamos los inputs "+"
             continue;
         }else{
-            numbers[count++] = s[i]-'0';
+            numbers[count++] = s[i]-'0'; //guardamos en el arreglo los valores de la string "s"
         }
     }
 
-    std::sort(numbers,numbers+count);
+    std::sort(numbers,numbers+count); //ordenamos el vector numeros
 
-    for(int i=0; i<count;i++){
+    for(int i=0; i<count;i++){//ciclo va desde 0 hasta count ya que count es el la cantidad de numeros que se agregaron al arreglo
         std::cout<<numbers[i];
         if(i==count-1){
             break;
         }
         std::cout << "+";
-    }
+    } //ciclo imprime los numeros en el arreglo usando un "+" en medio de cada uno
 
     return 0;
 
